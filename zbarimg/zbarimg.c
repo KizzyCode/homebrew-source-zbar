@@ -44,7 +44,7 @@
 #endif
 
 #ifdef HAVE_IMAGEMAGICK
-# include <wand/MagickWand.h>
+# include <ImageMagick-7/MagickWand/MagickWand.h>
 
 /* ImageMagick frequently changes API names - just use the original
  * (more stable?) names to match GraphicsMagick

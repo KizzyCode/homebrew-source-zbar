@@ -339,7 +339,7 @@ dnl but the latter doesn't exist in older verisons (bug #2848437)
 dnl double check ImageMagick install (bug #2582232)
       CPPFLAGS_save="$CPPFLAGS"
       CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
-      AC_CHECK_HEADER([wand/MagickWand.h],
+      AC_CHECK_HEADER([ImageMagick-7/MagickWand/MagickWand.h],
         [have_IM="yes"],
         [have_IM="broken"])
       CPPFLAGS="$CPPFLAGS_save"])])
@@ -371,7 +371,7 @@ AS_IF([test "x$have_IM" = "xyes" || test "x$have_GM" = "xyes"],
    test "x$with_graphicsmagick" != "xyes"],
   [AC_MSG_NOTICE([image scanning disabled -- zbarimg will *not* be built])],
   [test "x$have_IM" = "xbroken"],
-  [AC_MSG_FAILURE([$magick package found but wand/MagickWand.h not installed?!
+  [AC_MSG_FAILURE([$magick package found but ImageMagick-7/MagickWand/MagickWand.h not installed?!
 this is a problem with your $magick install, please try again after
 resolving the inconsistency or installing GraphicsMagick alternative...])],
   [AC_MSG_FAILURE([dnl
