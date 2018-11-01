@@ -1,3 +1,5 @@
+.hgignore
+.hgtags
 Makefile
 Makefile.in
 aclocal.m4
